@@ -18,3 +18,32 @@ def sum_up_diagonals(matrix):
         >>> sum_up_diagonals(m2)
         30
     """
+
+    # ASK MIKAEL
+
+    # total = 0
+
+    # print(len(matrix)-1)
+
+    # for row in matrix:
+    #     print(matrix.index(row))
+    #     for i in row:
+    #         print(row.index(i))
+    #         if row.index(i) == matrix.index(row):
+    #             total += i
+    #         elif (row.index(i)) + (matrix.index(row)) == (len(matrix)-1):
+    #             total += i
+    
+    # return total
+
+    #ASK MIKAEL
+
+    #Suggested Solution
+
+    total = 0
+
+    for i in range(len(matrix)):
+        total += matrix[i][i]
+        total += matrix[i][-1 - i]
+
+    return total

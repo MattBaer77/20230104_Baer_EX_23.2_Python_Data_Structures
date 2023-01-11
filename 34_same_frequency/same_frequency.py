@@ -10,3 +10,22 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+
+    for digit in str(num1):
+        if str(num1).count(digit) != str(num2).count(digit):
+            return False
+    
+    return True
+
+    # Suggested Solution
+    # def freq_counter(coll):
+    #     """Returns frequency counter mapping of coll."""
+
+    #     counts = {}
+
+    #     for x in coll:
+    #         counts[x] = counts.get(x, 0) + 1
+
+    #     return counts
+
+    # return freq_counter(str(num1)) == freq_counter(str(num2))
